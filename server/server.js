@@ -11,6 +11,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, "../")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../index.html"));
+});
+
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
