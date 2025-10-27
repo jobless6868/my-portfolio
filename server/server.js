@@ -2,6 +2,8 @@ import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";  
 
 dotenv.config({ path: './server/.env' });
 console.log("EMAIL_USER:", process.env.EMAIL_USER);
