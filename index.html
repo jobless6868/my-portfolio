@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Mai Hồng Phúc</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#">Mai Hồng Phúc</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home_section">
+    <div class="hero" data-aos="fade-up">
+      <h1 id="typewriter"></h1>
+      <p>
+                Embarking on my journey in the vast world of software development, I approach this field with a strong
+                desire to learn and a passion for creating. As a newcomer, I strive to blend logical thinking with
+                adaptable
+                problem-solving, steadily building a solid technical foundation. Every line of code is an opportunity to
+                explore, experiment, and grow—to craft clean, useful, and meaningful solutions. I believe persistence
+                and a
+                growth mindset are key to evolving and making a mark in this ever-evolving industry.
+  </p>
+      <span class="scroll_btn">(Scroll to explore)</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about_section" data-aos="fade-up">
+    <h2>Who am I?</h2>
+    <div class="about_content">
+      <p>
+            As a passionate Website Developer and Software Engineer, I am seeking opportunities to apply my technical
+            skills and creativity in building innovative and user-centered solutions. I am eager to grow in a
+            collaborative team environment and contribute to impactful projects. My interests include website
+            development, UX/UI design, front-end engineering, and scalable software systems. With a strong work ethic
+            and a commitment to continuous learning, I am confident in my ability to be a valuable asset to your team.
+ </p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS, PHP</span>
+        <span>C#</span>
+        <span>SQL</span>
+        <span>Java (Servlet)</span>
+        <span>ASP.NET Core</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="project_section" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <div class="project_grid">
+        <div class="project">
+      <img src="assets/img/project1.jpg" alt="Ứng dụng Quản Lý Tiền Lương Nhân Viên">
+      <div class="project_overlay">
+        <h3>Ứng dụng Quản Lý Tiền Lương Nhân Viên</h3>
+        <p>Quản lý nhân sự, hợp đồng, tính lương và báo cáo tự động.</p>
+        <span>C# | .NET Framework | SQL Server</span>
+      </div>
+    </div>
+ 
+      <div class="project">
+      <img src="assets/img/project2.png" alt="Website Quản lý Sản phẩm Sữa">
+      <div class="project_overlay">
+        <h3>Website Quản Lý Sản Phẩm Sữa</h3>
+        <p>Website quản lý danh sách sản phẩm sữa tại một cửa hàng .</p>
+        <span>HTML | CSS | JavaScript | SQL Server</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="assets/img/project3.png" alt="Phần mềm Bán Hàng (WinForms)">
+      <div class="project_overlay">
+        <h3>Phần Mềm Bán Hàng</h3>
+        <p>Ứng dụng bán hàng, quản lý doanh thu, nguyên liệu.</p>
+        <span>C# | WinForms | SQL Server</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="assets/img/project4.png" alt="Game Oẳn Tù Tì (Unity)">
+      <div class="project_overlay">
+        <h3>Game Oẳn Tù Tì</h3>
+        <p>Oẳn tù xì dạng thẻ bài có thể chơi với máy hoặc với người</p>
+        <span>Unity | C# | Animator | UI Toolkit</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact_section" data-aos="zoom-in">
+    <h2>Wanna work with me?</h2>
+    <div class="contact_links">
+      <a href="https://www.facebook.com/hg.phuc.367262" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="#">Zalo</a>
+      <a href="#" id="emailLink">Email</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>© 2025 Mai Hồng Phúc | All Rights Reserved.</footer>
+  <div id="zalo-popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h3>Quét mã để kết bạn Zalo</h3>
+        <img src="assets/img/zalo-qr.jpg" alt="QR Zalo" />
+      </div>
+    </div>
+        <div id="emailPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h3>Send me a message 💌</h3>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message..." required></textarea>
+        <button type="submit">Send</button>
+        <p id="responseMessage"></p>
+      </form>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Home Section */
+.home_section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 10%;
+  background: linear-gradient(135deg, #000000, #1a1a1a, #101010);
+}
+
+#typewriter {
+  font-family: "Anton", sans-serif;
+  font-size: 6vw;
+  text-transform: uppercase;
+  border-right: 4px solid white;
+  animation: blink 0.8s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.scroll_btn {
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+/* About Section */
+.about_section {
+  position: relative;
+  min-height: 100vh;
+  padding: 10vh 10%;
+  background: url('assets/img/about.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+}
+
+.about_section h2, .about_content {
+  position: relative;
+  z-index: 1;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 10%;
+}
+
+.skills span {
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* Projects */
+.project_section {
+  padding: 5vh 2vw;
+  text-align: center;
+}
+
+.project_section h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 3vw;
+  margin-bottom: 3vh;
+  text-transform: uppercase;
+}
+
+.project_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2vw;
+}
+
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10vh;
+}
+
+.project img {
+  width: 100%;
+  height: 270px;
+  display: block;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+}
+
+
+.project_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+
+.project_overlay h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+
+.project_overlay p,
+.project_overlay span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.project_overlay p {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.project_overlay span {
+  font-size: 0.85rem;
+  color: #00d9ff;
+}
+
+.project:hover img {
+  filter: brightness(40%);
+  transform: scale(1.05);
+}
+
+.project:hover .project_overlay {
+  justify-content: center;
+}
+
+.project:hover .project_overlay h3 {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+.project:hover .project_overlay p,
+.project:hover .project_overlay span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Contact */
+.contact_section {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.contact_section h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact_links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact_links a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact_links a:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+/* --- Popup QR Zalo --- */
+.popup {
+  display: none;              
+  position: fixed;            
+  inset: 0;                   
+  z-index: 9999;              
+  background-color: rgba(0,0,0,0.65);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;               
+  pointer-events: none;      
+  transition: opacity 0.18s ease;
+  opacity: 0;
+}
+
+/* show state */
+.popup.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;         /* bật tương tác khi hiển thị */
+}
+
+/* nội dung popup */
+.popup-content {
+  position: relative;
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 520px;            /* giới hạn chiều ngang chung */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transform: translateY(0);
+}
+
+/* nút đóng (trên cùng phải) - dùng absolute cho ổn định */
+.popup-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #bbb;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+.popup-content .close-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.03);
+}
+
+/* riêng cho QR (ZALO): giới hạn kích thước ảnh) */
+.popup-content img {
+  max-width: 360px;     /* ảnh lớn nhất */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 6px solid rgba(255,255,255,0.03);
+  box-sizing: border-box;
+}
+
+/* riêng cho form (Email) - giữ chung style gọn */
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+.popup-content input[type="text"],
+.popup-content input[type="email"],
+.popup-content textarea {
+  background:#0f0f10;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.popup-content textarea { min-height: 110px; resize: vertical; }
+.popup-content button[type="submit"] {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+}
+.popup-content button[type="submit"]:hover { background: #ff4c4c; }
+
+/* khi màn nhỏ, thu popup nhỏ lại */
+@media (max-width: 480px) {
+  .popup-content { max-width: 92%; padding: 1rem; }
+  .popup-content img { max-width: 280px; }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  opacity: 0.7;
+}
