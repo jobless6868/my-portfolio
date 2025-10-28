@@ -10,6 +10,7 @@ console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
 
 const app = express();
+app.options("*", cors());
 app.use(express.json());
 app.use(cors());
 
@@ -52,3 +53,5 @@ const PORT = 3000;
 app.listen(PORT, () =>
   console.log(`Server đang chạy tại http://localhost:${PORT}`)
 );
+
+
