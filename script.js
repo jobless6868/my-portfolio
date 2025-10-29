@@ -82,7 +82,7 @@ if (contactForm) {
     }
 
     try {
-      const res = await fetch("https://my-portfolio-mhp.onrender.com/send-email", {
+      const res = await fetch("http://localhost:3000/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
