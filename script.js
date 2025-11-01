@@ -82,7 +82,7 @@ if (contactForm) {
     }
 
     try {
-      const res = await fetch("mail-api-production.up.railway.app", {
+      const res = await fetch("https://mail-api-zzeb.onrender.com/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
