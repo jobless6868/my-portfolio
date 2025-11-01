@@ -82,7 +82,7 @@ if (contactForm) {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/send-email", {
+      const res = await fetch("mail-api-production.up.railway.app", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
