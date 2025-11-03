@@ -221,7 +221,6 @@ body.no-scroll {
   transform: translateY(0);
 }
 
-
 /* Contact */
 .contact_section {
   text-align: center;
@@ -271,14 +270,13 @@ body.no-scroll {
   opacity: 0;
 }
 
-/* show state */
 .popup.show {
   display: flex;
   opacity: 1;
-  pointer-events: auto;         /* bật tương tác khi hiển thị */
+  pointer-events: auto;        
 }
 
-/* nội dung popup */
+
 .popup-content {
   position: relative;
   background: #111;
@@ -287,13 +285,12 @@ body.no-scroll {
   padding: 1.6rem 1.6rem 1.6rem 1.6rem;
   border-radius: 12px;
   text-align: center;
-  max-width: 520px;            /* giới hạn chiều ngang chung */
+  max-width: 520px;          
   width: 100%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   transform: translateY(0);
 }
 
-/* nút đóng (trên cùng phải) - dùng absolute cho ổn định */
 .popup-content .close-btn {
   position: absolute;
   top: 10px;
@@ -311,9 +308,8 @@ body.no-scroll {
   background: rgba(255,255,255,0.03);
 }
 
-/* riêng cho QR (ZALO): giới hạn kích thước ảnh) */
 .popup-content img {
-  max-width: 360px;     /* ảnh lớn nhất */
+  max-width: 360px;     
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -321,7 +317,7 @@ body.no-scroll {
   box-sizing: border-box;
 }
 
-/* riêng cho form (Email) - giữ chung style gọn */
+
 .popup-content form {
   display: flex;
   flex-direction: column;
@@ -351,7 +347,7 @@ body.no-scroll {
 }
 .popup-content button[type="submit"]:hover { background: #ff4c4c; }
 
-/* khi màn nhỏ, thu popup nhỏ lại */
+
 @media (max-width: 480px) {
   .popup-content { max-width: 92%; padding: 1rem; }
   .popup-content img { max-width: 280px; }

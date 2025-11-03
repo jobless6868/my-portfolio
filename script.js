@@ -82,7 +82,7 @@ if (contactForm) {
     }
 
     try {
-      emailjs.init("BvIe_Pxd6PPPLRQHJ"); // 🔑 Public key của bạn
+      emailjs.init("BvIe_Pxd6PPPLRQHJ"); 
 
       const result = await emailjs.send("service_mhp6811", "template_dvxolmg", {
         from_name: name,
