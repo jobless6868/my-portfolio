@@ -77,7 +77,7 @@ body.no-scroll {
   position: relative;
   min-height: 100vh;
   padding: 10vh 10%;
-  background: url('assets/img/about.jpg') center/cover no-repeat;
+  background: url('assets/img/About.jpg') center/cover no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
