@@ -90,7 +90,7 @@ if (contactForm) {
         message: message,
       });
 
-      alert("✅ Gửi email thành công! Thư đã được gửi tới mail của bạn (thông qua jobless@gmail.com)");
+      alert("✅ Gửi email thành công! Thư đã được gửi tới mail của bạn ");
       contactForm.reset();
       closePopup(document.getElementById("emailPopup"));
     } catch (error) {
