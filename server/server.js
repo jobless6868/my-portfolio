@@ -11,16 +11,16 @@ console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
 
 const app = express();
 
-// ✅ CORS - chỉ cần dòng này thôi
+
 app.use(cors({
-  origin: "*", // hoặc "https://my-portfolio-mhp.onrender.com"
+  origin: "*", 
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
 
 app.use(express.json());
 
-// Static assets
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "../")));
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
 
-// Gửi email
+
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 

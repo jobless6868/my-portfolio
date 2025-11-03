@@ -70,7 +70,7 @@ const contactForm = document.querySelector("#emailPopup form");
 
 if (contactForm) {
   contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Ngăn form tự reload trang
+    e.preventDefault();
 
     const name = contactForm.querySelector('input[name="name"]').value.trim();
     const email = contactForm.querySelector('input[name="email"]').value.trim();
@@ -82,22 +82,20 @@ if (contactForm) {
     }
 
     try {
-      const res = await fetch("https://mail-api-zzeb.onrender.com/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+      emailjs.init("BvIe_Pxd6PPPLRQHJ"); // 🔑 Public key của bạn
+
+      const result = await emailjs.send("service_mhp6811", "template_dvxolmg", {
+        from_name: name,
+        from_email: email,
+        message: message,
       });
 
-      const data = await res.json();
-      alert(data.message); // Hiển thị phản hồi từ server
-
-      if (data.success) {
-        contactForm.reset();
-        closePopup(document.getElementById("emailPopup"));
-      }
-    } catch (err) {
-      console.error(err);
-      alert("❌ Không thể gửi email. Kiểm tra lại server hoặc mạng!");
+      alert("✅ Gửi email thành công! Thư đã được gửi tới mail của bạn (thông qua jobless@gmail.com)");
+      contactForm.reset();
+      closePopup(document.getElementById("emailPopup"));
+    } catch (error) {
+      console.error(error);
+      alert("❌ Không thể gửi email. Vui lòng thử lại sau!");
     }
   });
 }
